@@ -9,17 +9,16 @@
     <script>
          let numeroAleatorio = Math.random()*10;
          let numeroAleatorioInteiro = Math.round(numeroAleatorio)
-         document.write("O numero é: " + numeroAleatorioInteiro + ".");
-
+         
         let numero = prompt("Olá, pense em um número de 0-10, tente acertar o número que pensei!");
-        if(numero == numeroAleatorioInteiro){
-            document.write(" Você acertou!Parabéns!.") 
+        let resultado = (numero >=1 && numero <=10) ?
+            (numero == numeroAleatorioInteiro) ?
+            "Parabéns! Você adivinhou":
+            "Você errou! O número que eu pensei era " +
+                numeroAleatorioInteiro + "!" :
+            "Número inválido."
 
-
-        }else if (numero){
-            document.write(" Você errou! Tente novamente.")
-        }
-
+            document.write(resultado)
     
     </script>
 </body>
